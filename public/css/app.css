@@ -8,6 +8,8 @@ body {
   font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
+  background-image: url("../img/background.jpg");
+  background-repeat: round;
 }
 
 div {
@@ -73,12 +75,16 @@ div {
 }
 
 .chat-column {
-  height: 90%;
+  height: 70%;
   padding: 0.9375rem 0 0.625rem 0;
   margin: auto;
   text-align: left;
-  max-width: 25rem;
-  min-width: 9.375rem;
+  max-width: 25.375rem;
+  min-width: 25.375rem;
+  background-color: white;
+  position: fixed;
+  bottom: 0;
+  right: 0;
 }
 
 .user-typing {
@@ -170,7 +176,7 @@ div {
   border-top-right-radius: 1.25rem;
 }
 
-.from-watson, 
+.from-watson,
 .message-inner {
   position: relative;
   border-radius: 1.5625rem;
@@ -269,8 +275,14 @@ input:-moz-placeholder {
   overflow-x: auto;
 
   width: 45%;
+
+  /* OLD
   max-width: 32.0625rem;
-  min-width: 29.6875rem;
+  min-width: 29.6875rem; */
+
+  /* USED TO HIDE THE DEBUG COLUMN */
+  max-width: 0.0rem;
+  min-width: 0.0rem;
 }
 
 #payload-column.full {

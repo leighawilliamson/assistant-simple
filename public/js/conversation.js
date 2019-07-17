@@ -252,6 +252,15 @@ var ConversationPanel = (function () {
         type: gen.response_type,
         innerhtml: gen.text
       });
+      //DEBUG
+      //console.log("Response is generic.text: " + gen.text)
+    } else if (gen.response_type === 'search') {
+      responses.push({
+        type: gen.response_type,
+        innerhtml: gen.header + "<p>" + gen.results[0].body
+      });
+      //DEBUG
+      //console.log("Response is search: " + gen.header)
     } else if (gen.response_type === 'pause') {
       responses.push({
         type: gen.response_type,
