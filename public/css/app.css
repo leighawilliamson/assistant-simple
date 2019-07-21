@@ -8,8 +8,9 @@ body {
   font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url("../img/background.jpg");
-  background-repeat: round;
+  /* background-image: url("../img/background.jpg"); 
+  background-repeat: no-repeat; */
+  background-size: 100%; 
 }
 
 div {
@@ -23,20 +24,21 @@ div {
 }
 
 #view-change-button {
-  display: inline-block;
+  display: block;
   position: absolute;
   width: 3.125rem;
   height: 3.125rem;
   border-radius: 1.5625rem;
   background: #AB72F8;
-  top: 0.3125rem;
+  background-image: url("../img/Chat Button.png"); 
+  background-size: 100%;
+  bottom: 0.3125rem;
   right: 0.3125rem;
   line-height: 3.125rem;
   vertical-align: middle;
 }
 
 #view-change-button img {
-  display: none;
   width: 100%;
   height: 100%;
   vertical-align: middle;
@@ -50,8 +52,28 @@ div {
   display: inline-block;
 }
 
+#chat-window {
+  /*background-color: white;*/
+  width: 400px;
+  height: 500px;
+  float: right;
+  margin: 30px;
+}
+
+#popup-frame {
+  height: 100%;
+  width: 100%;
+  top: 0px;
+  border: #445de9af;
+  box-shadow: 5px 10px #d0d5f3; 
+  border-width: 7px; 
+  border-style: ridge;
+}
+
 #contentParent {
   height: 100%;
+  width: 100%;
+  top: 0pt;
 }
 
 .responsive-columns-wrapper {
@@ -75,16 +97,17 @@ div {
 }
 
 .chat-column {
-  height: 70%;
+  height: 100%;
   padding: 0.9375rem 0 0.625rem 0;
   margin: auto;
   text-align: left;
-  max-width: 25.375rem;
+  /*max-width: 25.375rem;*/
   min-width: 25.375rem;
   background-color: white;
   position: fixed;
   bottom: 0;
   right: 0;
+  width: 100%;
 }
 
 .user-typing {
@@ -196,9 +219,10 @@ div {
 }
 
 .from-watson.latest.top p:before {
-  content: ".";
+  /*content: ".";*/
   color: #9855D4;
-  background-image: url("../img/marker_image.png");
+  /*background-image: url("../img/marker_image.png");*/
+  background-image: none;
   background-size: 0.3125rem 1.3125rem;
   position: absolute;
   z-index: 2;
