@@ -62,10 +62,11 @@ div {
   height: 100%;
   width: 100%;
   top: 0px;
-  border: #445de9af;
-  box-shadow: 5px 15px #323233; 
+  border: solid rgb(0, 132, 255);
+  border-radius: 15px;
+  box-shadow: 5px 10px #3f3f41; 
   border-width: 7px; 
-  border-style: ridge;
+ /* border-style: ridge;*/
 }
 
 
