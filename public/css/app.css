@@ -8,8 +8,6 @@ body {
   font-family: Helvetica Neue for IBM, Helvetica Neue, Helvetica, Arial, sans-serif;
   margin: 0;
   padding: 0;
-  /* background-image: url("../img/background.jpg"); 
-  background-repeat: no-repeat; */
   background-size: 100%; 
 }
 
@@ -35,7 +33,7 @@ div {
   bottom: 0.3125rem;
   right: 0.3125rem;
   line-height: 3.125rem;
-  vertical-align: middle;
+  cursor: pointer;
 }
 
 #view-change-button img {
@@ -65,15 +63,39 @@ div {
   width: 100%;
   top: 0px;
   border: #445de9af;
-  box-shadow: 5px 10px #d0d5f3; 
+  box-shadow: 5px 15px #a2a2a5; 
   border-width: 7px; 
   border-style: ridge;
 }
 
+
+.popupCloseButton {  
+  background-color: white;
+  width: 30px;
+  height: 30px;
+  border: 3px solid #999;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: arial;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: center;
+  padding: 0px;
+  line-height: 25px;
+  top: 20px;
+  right: -10px;
+  position: relative;
+  float: right;
+}
+.popupCloseButton:hover {
+  background-color: #ccc;
+}
+
+
 #contentParent {
   height: 100%;
   width: 100%;
-  top: 0pt;
+ /* top: 0pt;*/
 }
 
 .responsive-columns-wrapper {

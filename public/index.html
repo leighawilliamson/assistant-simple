@@ -12,25 +12,42 @@
 
   <script type="text/javascript">
     if (document.getElementsByTagName) onload = function () {
-    document.getElementsByTagName ('IFRAME')[0].className = 'hide'   
+      document.getElementsByTagName ('IFRAME')[0].className = 'hide';   
+      document.getElementById("close-chat").style.display = "none";
     }
   </script>
 
   <style type="text/css">
     .hide {display:none}
   </style>  
+
+  <script>
+    function toggle() {
+      var x = document.getElementById("close-chat");
+      var w = document.getElementById("popup-frame");
+      if (x.style.display === "none") {
+        x.style.display = "block";
+        w.style.display = "block";
+      } else {
+        x.style.display = "none";
+        w.style.display = "none";
+      }
+    }
+    </script>
 </head>
 
 <body background="../img/background.jpg">
 
   <div>
-    <button id="view-change-button" type="button" 
-      onclick="document.getElementsByTagName ('IFRAME')[0].className = 'show'">
-    </button>
+    <button id="view-change-button" type="button" onclick="toggle()"></button>
   </div>
 
-  <div id="chat-window">
-      <iframe id="popup-frame" src="conversation-window.html">          
+  <div id="chat-window">   
+      <div>
+        <button id="close-chat" class="popupCloseButton" onclick="toggle()">X</button> 
+      </div> 
+
+      <iframe id="popup-frame" src="conversation-window.html">       
       </iframe>
   </div>
 
