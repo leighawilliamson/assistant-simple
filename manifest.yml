@@ -1,5 +1,5 @@
 applications:
-- name: OAG-watson-assistant-demo
+- name: SJCD-watson-assistant-demo
   command: npm start
   path: .
   memory: 256M
