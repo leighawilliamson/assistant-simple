@@ -8,55 +8,25 @@
   <meta property="og:title" content="Conversation Chat Simple" />
   <meta property="og:description" content="Sample application that shows how to use the Watson Assistant API to identify user intents" />
   <link rel="shortcut icon" href="favicon.png" type="image/png">
-  <link rel="stylesheet" href="css/app.css">
-
-  <script type="text/javascript">
-    if (document.getElementsByTagName) onload = function () {
-      document.getElementsByTagName ('IFRAME')[0].className = 'hide';   
-      document.getElementById("close-chat").style.display = "none";
-    }
-  </script>
-
-  <style type="text/css">
-    .hide {display:none}
-  </style>  
-
-  <script>
-    function toggle() {
-      var x = document.getElementById("close-chat");
-      var w = document.getElementById("popup-frame");
-      if (x.style.display === "none") {
-        x.style.display = "block";
-        w.style.display = "block";
-      } else {
-        x.style.display = "none";
-        w.style.display = "none";
-      }
-    }
-    </script>
+  <link rel="stylesheet" href="https://sjcd-watson-assistant-demo.mybluemix.net/css/app.css">
 </head>
 
 <body background="../img/background.jpg">
 
   <div>
-    <button id="view-change-button" type="button" onclick="toggle()"></button>
+    <button id="view-change-button" type="button" onclick="Common.toggle()"></button>
   </div>
 
   <div id="chat-window">   
       <div>
-        <button id="close-chat" class="popupCloseButton" onclick="toggle()">X</button> 
+        <button id="close-chat" class="popupCloseButton" onclick="Common.toggle()">X</button> 
       </div> 
 
       <iframe id="popup-frame" src="conversation-window.html">       
       </iframe>
   </div>
 
-  <script src="js/common.js"></script>
-  <script src="js/api.js"></script>
-  <script src="js/conversation.js"></script>
-  <script src="js/payload.js"></script>
-  <script src="js/global.js"></script>
-  <script type="text/javascript" src="https://cdn.rawgit.com/watson-developer-cloud/watson-developer-cloud.github.io/master/analytics.js"></script>
+  <script src="https://sjcd-watson-assistant-demo.mybluemix.net/js/common.js"></script>
 
 </body>
 </html>

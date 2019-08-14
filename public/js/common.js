@@ -4,10 +4,15 @@
 
 var Common = (function () {
   // Publicly accessible methods defined
+  if (document.getElementsByTagName) onload = function () {
+    document.getElementsByTagName ('IFRAME')[0].className = 'hide';   
+    document.getElementById("close-chat").style.display = "none";
+  }
   return {
     buildDomElement: buildDomElementFromJson,
     fireEvent: fireEvent,
-    listForEach: listForEach
+    listForEach: listForEach,
+    toggle: toggle
   };
 
   // Take in JSON object and build a DOM element out of it
@@ -75,6 +80,18 @@ var Common = (function () {
   function listForEach(list, callback) {
     for (var i = 0; i < list.length; i++) {
       callback.call(null, list[i]);
+    }
+  }
+
+  function toggle() {
+    var x = document.getElementById("close-chat");
+    var w = document.getElementById("popup-frame");
+    if (x.style.display === "none") {
+      x.style.display = "block";
+      w.style.display = "block";
+    } else {
+      x.style.display = "none";
+      w.style.display = "none";
     }
   }
 }());
