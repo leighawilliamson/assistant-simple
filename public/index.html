@@ -1,7 +1,7 @@
 <html>
 <head>
   <base href="/">
-  <title>Regions Bank Watson Assistant</title>
+  <title>COVID-19 Bot</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta property="og:image" content="conversation.svg" />
@@ -13,16 +13,17 @@
 
 <body background="../img/background.jpg">
 
-  
-  
-  <script src=https://assistant-web.watsonplatform.net/loadWatsonAssistantChat.js></script>
-<script>
-  window.loadWatsonAssistantChat({
-    integrationID: "937dcbe1-5c24-4aec-ad0a-1c2ffda1c5ef", // The ID of this integration.
-    region: "us-south" // The region your integration is hosted in.
-  }).then(function(instance){
-    instance.render();
-  });
-</script>
+
+
+    <script src="https://web-chat.global.assistant.watson.cloud.ibm.com/loadWatsonAssistantChat.js"></script>
+    <script>
+      window.loadWatsonAssistantChat({
+        integrationID: "280d705d-583b-4828-9726-b8c6af947142", // The ID of this integration.
+        region: "us-south" // The region your integration is hosted in.
+      }).then(function(instance){
+        instance.render();
+      });
+    </script>
+
 </body>
 </html>
