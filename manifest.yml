@@ -1,5 +1,5 @@
 applications:
-- name: leighs-watson-assistant-simple-dev
+- name: uams-covid-screening-assistant
   command: npm start
   path: .
   memory: 256M
